@@ -1,11 +1,11 @@
-let memory = {}
+const memory = {}
 
-var twoSum = function (nums, target) {
+const twoSum = function (nums, target) {
     for (const pos in nums) {
         let complete = target - nums[pos]
         if (memory[complete]) {
             console.log(pos, memory[complete])
-            break;
+            break
         } else {
             memory[nums[pos]] = pos
         }
