@@ -1,7 +1,7 @@
-const memory = {}
-const array = []
-
 const removeDuplicates = function (nums) {
+    const memory = {}
+    const array = []
+
     for (const pos in nums) {
         if (memory[nums[pos]]) continue
 
@@ -12,4 +12,4 @@ const removeDuplicates = function (nums) {
     console.log(array)
 }
 
-removeDuplicates([1, 5, 2, 2, 8, 1, 2, 6, 5, 1])
+removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])

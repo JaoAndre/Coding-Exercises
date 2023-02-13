@@ -1,6 +1,6 @@
-const memory = {}
-
 const twoSum = function (nums, target) {
+    const memory = {}
+
     for (const pos in nums) {
         const complete = target - nums[pos]
 
