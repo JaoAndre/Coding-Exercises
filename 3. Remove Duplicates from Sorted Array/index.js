@@ -6,10 +6,10 @@ const removeDuplicates = function (nums) {
     if (memory[nums[pos]]) continue;
 
     array.push(nums[pos]);
-    memory[nums[pos]] = pos;
+    memory[nums[pos]] = true;
   }
 
-  console.log(array);
+  return array;
 };
 
-removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]);
+console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));

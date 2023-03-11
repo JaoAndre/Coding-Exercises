@@ -5,12 +5,11 @@ const twoSum = function (nums, target) {
     const complete = target - nums[pos];
 
     if (memory[complete]) {
-      console.log(pos, memory[complete]);
-      break;
+      return [pos, memory[complete]];
     }
 
     memory[nums[pos]] = pos;
   }
 };
 
-twoSum([2, 11, 15, 5, 4, 7], 9);
+console.log(twoSum([2, 11, 15, 5, 4, 7], 9));

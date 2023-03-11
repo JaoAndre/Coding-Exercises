@@ -5,7 +5,7 @@ const countOdds = function (low, high) {
     if (i % 2 !== 0) counts++;
   }
 
-  console.log(counts);
+  return counts;
 };
 
-countOdds(3, 7);
+console.log(countOdds(3, 7));

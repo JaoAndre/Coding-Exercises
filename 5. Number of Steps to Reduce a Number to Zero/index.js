@@ -6,7 +6,7 @@ const numberOfSteps = function (num) {
     steps++;
   }
 
-  console.log(steps);
+  return steps;
 };
 
-numberOfSteps(123);
+console.log(numberOfSteps(123));

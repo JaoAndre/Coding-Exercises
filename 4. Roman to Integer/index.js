@@ -1,24 +1,31 @@
-const map = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000, "": 0 };
-
 const romanToInt = function (s) {
-  const split = s.split("");
-  let decimal = 0;
-  let before = "";
+  const romanToDecimalMap = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
 
-  for (const letter of split) {
-    if (map[letter] > map[before]) {
-      const minus = map[before] * 2;
-      const subtract = map[letter] - minus;
-      decimal += subtract;
+  let decimal = 0;
+  let previousValue = 0;
+
+  for (const currentChar of s) {
+    const currentValue = romanToDecimalMap[currentChar];
+
+    if (currentValue > previousValue) {
+      decimal += currentValue - (2 * previousValue);
     } else {
-      decimal += map[letter];
+      decimal += currentValue;
     }
 
-    before = letter;
+    previousValue = currentValue;
   }
 
-  console.log(decimal);
+  return decimal;
 };
 
-romanToInt("MMV"); // 2005
-romanToInt("MCMXCIV"); // 1994
+console.log(romanToInt("MMV")); // 2005
+console.log(romanToInt("MCMXCIV")); // 1994

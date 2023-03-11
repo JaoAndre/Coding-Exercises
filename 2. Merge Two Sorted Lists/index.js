@@ -21,7 +21,7 @@ const mergeTwoLists = function (listOne, listTwo) {
     }
   }
 
-  console.log(array);
+  return array;
 };
 
-mergeTwoLists([1, 2, 4], [1, 3, 4]);
+console.log(mergeTwoLists([1, 2, 4], [1, 3, 4]));
